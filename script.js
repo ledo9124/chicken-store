@@ -6,7 +6,7 @@ const line = $('.line');
 const tabActive = $('.tab-item.active')
 
 line.style.top = (tabActive.offsetTop - 4) + 'px';
-line.style.height = tabActive.offsetHeight + 'px';
+line.style.height = (tabActive.offsetHeight - 4) + 'px';
 
 tabsElement.forEach(element => {
     element.onclick = function(){

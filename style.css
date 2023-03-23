@@ -8,13 +8,14 @@
 
 :root{
     --white: #fff;
-    --light: #eeeded;
+    --light: #ECF2FF;
     --orange: #FFA16C;
+    --ping: #FFA3FD;
     --JShine: #12c2e9, #c471ed, #f64f59;
 }
 
 body {
-    background-color: var(--orange);
+    background-image: linear-gradient(to left ,#F7C8E0 , #DFFFD8 , #B4E4FF , #95BDFF);
     font-family: system-ui;
     overflow: hidden;
 }
@@ -23,28 +24,27 @@ body {
     min-height: 90vh;
     width: 1200px;
     max-width: 100%;
-    border-radius: 30px;
+    border-radius: 24px;
     margin: 50px auto 0;
     display: grid;
     grid-template-columns: 20% auto 26%;
-    padding: 20px;
-    border: 1px solid var(--white);
+    padding: 12px;
+    border: 2px solid var(--ping);
 }
 
 .container .menu {
     position: relative;
     background-color: var(--white);
-    border-top-left-radius: 30px;
+    border-top-left-radius: 24px;
     border-bottom-left-radius: 30px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
+    padding: 20px 0;
     font-size: 24px;
     font-weight: 600;
     font-family: 'Lobster', cursive;
 }
 
-.menu span {
+.menu .logo {
+    padding-left: 20px;
     font-size: 28px;
     color: transparent;
     -webkit-background-clip: text;
@@ -63,11 +63,15 @@ body {
 }
 
 .menu li .tab-item {
-    opacity: .7;
-    padding: 8px 0;
+    opacity: .65;
+    padding: 4px 20px;
     text-decoration: none;
-    color: var(--orange);
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image:  linear-gradient(to left, #40e0d0, #ff8c00, #ff0080);
     display: block;
+    transition: .3s linear;
 }
 
 .menu li .active {
@@ -75,8 +79,7 @@ body {
 }
 
 .menu li:hover a {
-    background-color: rgba(194, 53, 100, 0.1);
-    border-color: rgba(194, 53, 100, 0.1);
+    opacity: 1;
 }
 
 .menu li i {
@@ -86,9 +89,9 @@ body {
 .menu .line {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     bottom: 0;
-    width: 20px;
+    width: 4px;
     height: 0;
     border-radius: 15px;
     background-image: linear-gradient(to top , var(--JShine));
