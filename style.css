@@ -27,7 +27,7 @@ body {
     border-radius: 24px;
     margin: 50px auto 0;
     display: grid;
-    grid-template-columns: 20% auto 26%;
+    grid-template-columns: 20% 54% 26%;
     padding: 12px;
     border: 2px solid var(--ping);
 }
@@ -112,5 +112,116 @@ body {
     border-bottom-right-radius: 30px;
 }
 
+/* center */
+.center .search {
+    background-color: var(--white);
+    padding: 20px;
+    height: 85px;
+}
 
+.center .search .form {
+    width: max-content;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    padding-left: 14px;
+    color: var(--light);
+    position: relative;
+}
+
+.center .search .form input {
+    border: none;
+    outline: none;
+    padding: 0 10px;
+    width: 150px;
+}
+
+.center .search .form button {
+    border: none;
+    background-image: linear-gradient(to left , var(--JShine));
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.form button:hover {
+    box-shadow: 0 0 8px var(--ping);
+}
+
+
+.center h2 {
+    padding: 8px 16px;
+}
+
+.list-products {
+    padding: 0 20px 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    row-gap: 16px;
+    column-gap: 16px;
+}
+
+.list-products .item {
+    background-color: var(--white);
+    padding: 8px;
+    border-radius: 12px;
+}
+
+.item .img img {
+    border-radius: 16px;
+    max-width: 100%;
+    object-fit: cover;
+    width: 100%;
+    height: 175px;
+}
+
+.item .des {
+    opacity: .7;
+}
+
+.item .form-buy {
+    display: grid;
+    grid-template-columns: 30%  23% 25% 10%;
+    gap: 8px;
+    padding: 4px 0;
+}
+
+.form-buy .price {
+    font-size: 20px;
+    font-weight: 600;
+    color: red;
+    text-align: center;
+}
+
+.form-buy .count {
+    width: 60px;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 4px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+}
+
+.form-buy .add-count {
+    background-color: var(--orange);
+    border: none;
+    border-radius: 16px;
+    width: 100%;
+    cursor: pointer;
+}
+
+.form-buy .remove {
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.form-buy .add-count:hover ,
+.form-buy .remove:hover {
+    box-shadow: 0 5px 0 #ccc;
+}
+
+
+/* End center */
 
