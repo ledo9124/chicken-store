@@ -7,6 +7,12 @@
 }
 
 :root{
+    --back: #211E32;
+    --dark: #2A2F42;
+    --green: #5AFE72;
+    --purple: #9A3BBA;
+    --danger: #FE4E56;
+    --yellow: #fbff22;
     --white: #fff;
     --light: #ECF2FF;
     --orange: #FFA16C;
@@ -21,15 +27,21 @@ body {
 }
 
 .container {
-    min-height: 90vh;
+    height: 94%;
     width: 1200px;
     max-width: 100%;
     border-radius: 24px;
-    margin: 50px auto 0;
+    margin: 20px auto 0;
     display: grid;
     grid-template-columns: 20% 54% 26%;
     padding: 12px;
     border: 2px solid var(--ping);
+}
+
+.center ,
+.cart {
+    height: 90vh;
+    overflow: hidden;
 }
 
 .container .menu {
@@ -171,7 +183,7 @@ body {
     max-width: 100%;
     object-fit: cover;
     width: 100%;
-    height: 175px;
+    height: 135px;
 }
 
 .item .des {
@@ -206,8 +218,24 @@ body {
     background-color: var(--orange);
     border: none;
     border-radius: 16px;
-    width: 100%;
     cursor: pointer;
+    transform: translateX(0);
+    transition: transform .2s linear;
+}
+
+.form-buy .add-count:hover i {
+    animation: backAdd .2s linear;
+    animation-iteration-count: 1;
+    transform: translateX(-24px);
+}
+
+@keyframes backAdd {
+    0% {
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-24px);
+    }
 }
 
 .form-buy .remove {
@@ -219,9 +247,38 @@ body {
 
 .form-buy .add-count:hover ,
 .form-buy .remove:hover {
-    box-shadow: 0 5px 0 #ccc;
+    box-shadow: 0 5px 5px var(--green);
+    transform: translate(0 , -2px);
 }
 
 
 /* End center */
 
+.cart .name {
+    padding: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Lobster', cursive;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to left bottom , var(--JShine));
+}
+
+.cart .item {
+    transition: .5s linear;
+    border-bottom: 1px solid var(--light);
+}
+
+.cart .add-count {
+    display: none;
+}
+
+.cart .remove {
+    display: inline-block;
+}
+
+.danger {
+    box-shadow: 0 10px 10px var(--orange);
+    transform: translate(0 , -10px);
+}
