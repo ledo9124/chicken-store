@@ -265,9 +265,15 @@ body {
     background-image: linear-gradient(to left bottom , var(--JShine));
 }
 
+.cart .listCart{
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
 .cart .item {
     transition: .5s linear;
     border-bottom: 1px solid var(--light);
+    padding: 16px;
 }
 
 .cart .add-count {
@@ -281,4 +287,58 @@ body {
 .danger {
     box-shadow: 0 10px 10px var(--orange);
     transform: translate(0 , -10px);
+}
+
+.cart {
+    position: relative;
+}
+
+.pay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+
+.pay label {
+    padding: 4px 8px;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    background-image: linear-gradient(to left, #40e0d0, #ff8c00, #ff0080);
+    font-size: 24px;
+    font-weight: 600;
+    font-family: 'Lobster', cursive;
+}
+
+.pay input {
+    width: 100px;
+    font-size: 20px;
+    border: 1px solid var(--ping);
+    padding: 4px 8px;
+}
+
+.pay input,
+.pay .btn-pay {
+    outline: none;
+    border-radius: 24px;
+}
+
+.pay .btn-pay {
+    border: none;
+    background-image: linear-gradient(to left , var(--JShine));
+    font-size: 16px;
+    padding: 8px;
+    cursor: pointer;
+    transition: .2s linear;
+}
+
+.pay .btn-pay:hover {
+    box-shadow: 0 4px 4px var(--danger);
+    transform: translate(0 , -4px);
 }

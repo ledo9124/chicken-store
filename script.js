@@ -35,8 +35,15 @@ itemsElement.forEach(item => {
                 }
             })
             if (checkIsset === false) {
-                document.querySelector('.listCart').appendChild(itemNew);
+                let listCarts = document.querySelector('.listCart');
+                listCarts.appendChild(itemNew);
+                let items = listCarts.querySelectorAll('.item');
+                let lengthListCart = items.length;
+                if (lengthListCart === 3) {
+                    items[0].remove();
+                }
             }
+            document.querySelector('.pay').style.opacity = '1';
         }
     })
 })

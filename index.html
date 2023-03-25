@@ -17,9 +17,9 @@
             </div>
 
             <ul class="nav">
-                <li><a href="#" class="tab-item active"><i class="fa-solid fa-house-user"></i> Home</a></li>
-                <li><a href="#" class="tab-item"><i class="fa-solid fa-cart-shopping"></i> Cart</a></li>
-                <li><a href="#" class="tab-item"><i class="fa-solid fa-star"></i> Favourite</a></li>
+                <li><a href="#" class="tab-item active"><i class="fa-solid fa-house-user"></i> Trang Chủ</a></li>
+                <li><a href="#" class="tab-item"><i class="fa-solid fa-cart-shopping"></i> Giỏ Hàng</a></li>
+                <li><a href="#" class="tab-item"><i class="fa-solid fa-star"></i> Yêu Thích</a></li>
             </ul>
 
             <ul>
@@ -39,10 +39,10 @@
                 </div>
             </div>
 
-            <h2>PRODUCTS</h2>
+            <h2>CÁC SẢN PHẨM</h2>
 
             <div class="list-products">
-                <div class="item" data-key="1">
+                <div class="item" data-key="1" price="99">
                     <div class="img">
                         <img src="./img/ga_cg.jpg" alt="Gà công nghiệp">
                     </div>
@@ -62,7 +62,7 @@
                     </div>
                 </div>
 
-                <div class="item" data-key="2">
+                <div class="item" data-key="2" price="111">
                     <div class="img">
                         <img src="./img/vit.jpg" alt="Vịt bơ">
                     </div>
@@ -82,7 +82,7 @@
                     </div>
                 </div>
 
-                <div class="item" data-key="3">
+                <div class="item" data-key="3" price="123">
                     <div class="img">
                         <img src="./img/ga_ta.jpg" alt="Vịt bơ">
                     </div>
@@ -102,8 +102,7 @@
                     </div>
                 </div>
 
-
-                <div class="item" data-key="4">
+                <div class="item" data-key="4" price="149">
                     <div class="img">
                         <img src="./img/ga_luoc.jpg" alt="Vịt bơ">
                     </div>
@@ -128,9 +127,12 @@
         </div>
 
         <div class="cart">
-            <div class="name">CART</div>
-            <div class="listCart">
-
+            <div class="name">Giỏ Hàng</div>
+            <div class="listCart"></div>
+            <div class="pay">
+                <label for="">Tổng</label>
+                <input type="text" class="total" readonly>
+                <button class="btn-pay"><i class="fa-solid fa-comment-dollar"></i>Thanh Toán</button>
             </div>
         </div>
 
