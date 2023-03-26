@@ -38,6 +38,8 @@ itemsElement.forEach(item => {
                 let listCarts = document.querySelector('.listCart');
                 listCarts.appendChild(itemNew);
                 let items = listCarts.querySelectorAll('.item');
+                const inputTotal = document.querySelector('.total');
+                inputTotal.value = getTotal(items);
                 let lengthListCart = items.length;
                 if (lengthListCart === 3) {
                     items[0].remove();
@@ -48,13 +50,38 @@ itemsElement.forEach(item => {
     })
 })
 
+function getLengthItem() {
+    return document.querySelectorAll('.cart .item').length;
+}
+
+
+
+function getTotal(listCart) {
+    let total = 0;
+    listCart.forEach(item => {
+        let sl = 1;
+        item.addEventListener('change' , function(event) {
+            sl = event.target.value;
+            total += Number(item.querySelector('.price').getAttribute('price'));
+            document.querySelector('.total').value = total + 'K';
+        });
+        total += Number(item.querySelector('.price').getAttribute('price'));
+    })
+    return total + 'K';
+}
+
 function remove(key) {
     let listCart = document.querySelectorAll('.cart .item');
     listCart.forEach(item => {
         if(item.getAttribute('data-key') == key){
             item.remove();
+            if (getLengthItem() == 0) {
+            document.querySelector('.pay').style.opacity = '0';
+            }
             return;
         }
     })
 }
+
+
 
